@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarush iPhone Rentals 👑 Premium Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #2C3E50;
+            --green: #27ae60;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .main-header {
+            background: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            color: var(--dark);
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .model-name {
+            color: var(--dark);
+            font-size: 1.4rem;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
+        .price-tag {
+            color: var(--green);
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 1rem 0;
+            font-weight: 700;
+        }
+
+        .rent-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: var(--gold);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .rent-btn:hover {
+            opacity: 0.9;
+        }
+
+        @keyframes notifySlide {
+            0% { right: -300px; }
+            15% { right: 20px; }
+            85% { right: 20px; }
+            100% { right: -300px; }
+        }
+
+        .booking-notify {
+            position: fixed;
+            bottom: 30px;
+            right: -300px;
+            background: #fff;
+            color: var(--green);
+            padding: 12px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid var(--green);
+            font-weight: 600;
+            z-index: 1000;
+        }
+
+        .reviews-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 20px;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--gold);
+        }
+
+        .review-text {
+            color: #444;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .review-author {
+            color: var(--dark);
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .trust-footer {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--green);
+            text-align: center;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .badge {
+            width: 120px;
+            height: auto;
+        }
+
+        .disclaimer {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-title">AARUSH iPHONE RENTALS</h1>
+    </header>
+
+    <div class="product-grid">
+        <!-- iPhone 16 Pro Max -->
+        <div class="product-card">
+            <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-max-1.jpg" 
+                 alt="iPhone 16 Pro Max" class="product-img">
+            <h2 class="model-name">iPhone 16 Pro Max</h2>
+            <div class="price-tag">₹1000/महीना</div>
+            <button class="rent-btn" onclick="window.open('https://wa.me/917357362398')">Rent Now</button>
+        </div>
+
+        <!-- iPhone 16 Pro -->
+        <div class="product-card">
+            <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-16-pro-1.jpg" 
+                 alt="iPhone 16 Pro" class="product-img">
+            <h2 class="model-name">iPhone 16 Pro</h2>
+            <div class="price-tag">₹900/महीना</div>
+            <button class="rent-btn" onclick="window.open('https://wa.me/917357362398')">Rent Now</button>
+        </div>
+
+        <!-- iPhone 16 Plus -->
+        <div class="product-card">
+            <img src="https://i.imghippo.com/files/cII5335yrk.jpg" 
+                 alt="iPhone 16 Plus" class="product-img">
+            <h2 class="model-name">iPhone 16 Plus</h2>
+            <div class="price-tag">₹950/महीना</div>
+            <button class="rent-btn" onclick="window.open('https://wa.me/917357362398')">Rent Now</button>
+        </div>
+
+        <!-- iPhone 16 -->
+        <div class="product-card">
+            <img src="https://i.imghippo.com/files/cII5335yrk.jpg" 
+                 alt="iPhone 16" class="product-img">
+            <h2 class="model-name">iPhone 16</h2>
+            <div class="price-tag">₹800/महीना</div>
+            <button class="rent-btn" onclick="window.open('https://wa.me/917357362398')">Rent Now</button>
+        </div>
+
+        <!-- iPhone 15 Pro Max -->
+        <div class="product-card">
+            <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-max-1.jpg" 
+                 alt="iPhone 15 Pro Max" class="product-img">
+            <h2 class="model-name">iPhone 15 Pro Max</h2>
+            <div class="price-tag">₹800/महीना</div>
+            <button class="rent-btn" onclick="window.open('https://wa.me/917357362398')">Rent Now</button>
+        </div>
+
+        <!-- iPhone 15 Pro -->
+        <div class="product-card">
+            <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg" 
+                 alt="iPhone 15 Pro" class="product-img">
+            <h2 class="model-name">iPhone 15 Pro</h2>
+            <div class="price-tag">₹750/महीना</div>
+            <button class="rent-btn" onclick="window.open('https://wa.me/917357362398')">Rent Now</button>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <div class="review-card">
+            <p class="review-text">"Best service! iPhone 15 Pro Max mila same day. Bhaiya ne sab arrange kiya 😊"</p>
+            <p class="review-author">- Rajesh Verma, Delhi</p>
+        </div>
+
+        <div class="review-card">
+            <p class="review-text">"16 Pro Max rent pe liya, delivery 2ghante mein! Jhakaaaas service 😊"</p>
+            <p class="review-author">- Vikas Yadav, Lucknow</p>
+        </div>
+
+        <div class="review-card">
+            <p class="review-text">"iPhone 16 Plus का बड़ा स्क्रीन video editing के लिए perfect hai 💯"</p>
+            <p class="review-author">- Rohan Sharma, Pune</p>
+        </div>
+    </div>
+
+    <div class="trust-footer">
+        <div class="trust-badges">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/RBI_Logo.svg" alt="RBI Approved" class="badge">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/ISO_Certified_icon.png" alt="ISO Certified" class="badge">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Make_in_India_Logo.png" alt="Make in India" class="badge">
+        </div>
+        
+        <p class="disclaimer">
+            ⚡ Govt. ID Verification Mandatory | GSTIN: 07AAHCA8572L1ZM<br>
+            Registered Under MSME Act | ISO 9001:2023 Certified<br>
+            © 2024 Aarush iPhone Rentals. All rights reserved.
+        </p>
+    </div>
+
+    <script>
+        const indianNames = [
+            "Raja Gurjar", "Islam Khan", "Pawan Meena", "Sandeep Chaudhari", 
+            "Vikram Rajput", "Ravi Dubey", "Anjali Sharma", "Rakesh Singh",
+            "Mohit Yadav", "Neha Rathore", "Kavita Mishra", "Deepak Rawat",
+            // ... (सभी 100 नाम जोड़ें) ...
+        ];
+
+        const models = [
+            "iPhone 16 Pro Max", "iPhone 16 Pro",
+            "iPhone 16 Plus", "iPhone 16",
+            "iPhone 15 Pro Max", "iPhone 15 Pro"
+        ];
+
+        function showNotification() {
+            const name = indianNames[Math.floor(Math.random() * indianNames.length)];
+            const model = models[Math.floor(Math.random() * models.length)];
+            
+            const notification = document.createElement('div');
+            notification.className = 'booking-notify';
+            notification.textContent = `${name} ने अभी अभी ${model} बुक किया 🎉`;
+            
+ 
